@@ -1,0 +1,43 @@
+// VARIABLES
+// Font
+$font: 'Share Tech', sans-serif;
+
+// Colours
+$dark: #272727;
+$yellow: #ffe400;
+$orange: #ff652f;
+$green: #14a76c;
+$gray: #b9b9b9;
+
+
+// IMPORTS
+@import "./partials/setup";
+@import "./partials/nav";
+@import "./partials/header";
+@import "./partials/animations";
+
+
+// GENERAl STYLES
+html {
+   font-size: 125%;
+}
+
+body {
+   color: $yellow;
+   background: $dark;
+   font-family: $font;
+}
+
+.wrapper {
+   max-width: 1200px;
+   width: 85%;
+   margin: 0 auto;
+}
+
+li {
+   list-style: none;
+
+   a {
+      text-decoration: none;
+   }
+}
