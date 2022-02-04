@@ -1,0 +1,115 @@
+// Header for about.html
+.aboutHeader {
+   height: 100vh;
+
+   .bio {
+      margin: 8rem 2rem 5rem 2rem;
+   }
+
+   .verticalAbout {
+      writing-mode: vertical-rl;
+      color: #fdee69;
+      letter-spacing: 0.7rem;
+      margin: 1.5rem;
+   }
+}
+
+// Main section for about.html
+.mainAbout {
+   padding-top: 5rem;
+
+   section {
+      height: 25rem;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 8rem;
+
+      
+   }
+
+   .hDiv {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 2rem;
+      padding-top: 4rem;
+      padding-left: 5rem;
+
+      h3 {
+         font-size: 3rem;
+         margin: 0;
+      }
+
+      .paraContainer {
+         height: 3rem;
+         padding-top: 0.5rem;
+         padding-left: 0.5rem;
+
+         .projectTitle,
+         .programs {
+            margin: 0;
+         }
+
+         .programs {
+            color: $gray;
+         }
+      }
+
+   }
+
+   .summary {
+      width: 75%;
+      margin: 0 auto;
+   }
+
+   .paraDiv {
+      color: $gray;
+      width: 45%;
+      height: 15rem;
+      padding-top: 4rem;
+      padding-left: 6.5rem;
+
+      a {
+         display: flex;
+         text-decoration: none;
+         margin-top: 2rem;
+
+         i {
+            color: $green;
+         }
+
+         p {
+            text-decoration: none;
+            color: $yellow;
+            margin: 0;
+            padding-left: 1rem;
+         }
+      }
+   }
+
+   .imgDiv {
+      width: 45%;
+      position: relative;
+      left: 1rem;
+      bottom: 1rem;
+      padding-left: 2rem;
+
+      img {
+         width: 100%;
+      }
+   }
+
+}
+
+footer {
+
+   a {
+      text-decoration: none;
+      color: $yellow;
+
+      h4 {
+         font-size: 2rem;
+         text-align: right;
+      }
+   }
+}

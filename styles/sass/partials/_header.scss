@@ -1,26 +1,6 @@
-// General Header
-header {
+// Header for index.html
+.indexHeader {
    height: 100vh;
-
-   nav {
-      display: flex;
-      justify-content: space-between;
-
-      img {
-         max-width: 4rem;
-         margin-top: 2rem;
-      }
-
-      ul {
-         display: flex;
-         margin: 2rem 0 0 0;
-
-         a {
-            color: $yellow;
-            margin-left: 2.5rem;
-         }
-      }
-   }
 
    .helloDiv {
       display: inline;
@@ -28,7 +8,7 @@ header {
       h1 {
          font-size: 1.8rem;
          text-align: center;
-         padding: 8rem 12.5rem 2rem 12.5rem;
+         padding: 8rem 12.5rem 1rem 12.5rem;
       }
 
       .shapes {
@@ -73,14 +53,26 @@ header {
       }
    }
 
-   .verticalText {
-      writing-mode: vertical-rl;
-      color: #fdee69;
+   .seeWork {
+      width: 20%;
+      margin-left: 37.5rem;
+      margin-top: 3.5rem;
+
+      a {
+         text-decoration: none;
+         color: $yellow;
+      }
    }
 
    h2 {
       letter-spacing: 0.5rem;
       margin-bottom: 2rem;
+   }  
+}
+
+   .verticalIndex {
+      writing-mode: vertical-rl;
+      color: #fdee69;
    }
 
    .verticalLine {
@@ -108,4 +100,3 @@ header {
    .lightest {
       background: #fcf6c7;
    }
-}

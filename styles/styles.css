@@ -235,10 +235,7 @@ html {
   overflow: hidden;
 }
 
-header {
-  height: 100vh;
-}
-header nav {
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -246,29 +243,33 @@ header nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-header nav img {
+nav img {
   max-width: 4rem;
   margin-top: 2rem;
 }
-header nav ul {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 2rem 0 0 0;
 }
-header nav ul a {
+nav ul a {
   color: #ffe400;
   margin-left: 2.5rem;
 }
-header .helloDiv {
+
+.indexHeader {
+  height: 100vh;
+}
+.indexHeader .helloDiv {
   display: inline;
 }
-header .helloDiv h1 {
+.indexHeader .helloDiv h1 {
   font-size: 1.8rem;
   text-align: center;
-  padding: 8rem 12.5rem 2rem 12.5rem;
+  padding: 8rem 12.5rem 1rem 12.5rem;
 }
-header .helloDiv .shapes {
+.indexHeader .helloDiv .shapes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -280,14 +281,14 @@ header .helloDiv .shapes {
   position: relative;
   margin: 0 auto;
 }
-header .helloDiv .shapes .square {
+.indexHeader .helloDiv .shapes .square {
   width: 1.5rem;
   height: 1.5rem;
   background: #14a76c;
   -webkit-animation: square 1.5s ease-in forwards;
           animation: square 1.5s ease-in forwards;
 }
-header .helloDiv .shapes .triangle {
+.indexHeader .helloDiv .shapes .triangle {
   height: 0.5rem;
   border-bottom: 1.5rem solid #ffe400;
   border-left: 0.8rem solid #272727;
@@ -295,7 +296,7 @@ header .helloDiv .shapes .triangle {
   -webkit-animation: triangle 1.5s ease-in forwards;
           animation: triangle 1.5s ease-in forwards;
 }
-header .helloDiv .shapes .line {
+.indexHeader .helloDiv .shapes .line {
   width: 2rem;
   height: 0.3rem;
   background: #14a76c;
@@ -304,7 +305,7 @@ header .helloDiv .shapes .line {
   -webkit-animation: line 1.5s ease-in forwards;
           animation: line 1.5s ease-in forwards;
 }
-header .helloDiv .shapes .circle {
+.indexHeader .helloDiv .shapes .circle {
   background: #ffe400;
   width: 1.5rem;
   height: 1.5rem;
@@ -312,24 +313,36 @@ header .helloDiv .shapes .circle {
   -webkit-animation: circle 1.5s ease-in forwards;
           animation: circle 1.5s ease-in forwards;
 }
-header .verticalText {
+.indexHeader .seeWork {
+  width: 20%;
+  margin-left: 37.5rem;
+  margin-top: 3.5rem;
+}
+.indexHeader .seeWork a {
+  text-decoration: none;
+  color: #ffe400;
+}
+.indexHeader h2 {
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.verticalIndex {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   color: #fdee69;
 }
-header h2 {
-  letter-spacing: 0.5rem;
-  margin-bottom: 2rem;
-}
-header .verticalLine {
+
+.verticalLine {
   width: 0.15rem;
   height: 2rem;
   background: #fdee69;
   margin-bottom: 0.5rem;
   margin-left: 2rem;
 }
-header .dot {
+
+.dot {
   width: 0.4rem;
   height: 0.4rem;
   background: #fdee69;
@@ -337,11 +350,127 @@ header .dot {
   margin-bottom: 1rem;
   margin-left: 2rem;
 }
-header .lighter {
+
+.lighter {
   background: #fff6a2;
 }
-header .lightest {
+
+.lightest {
   background: #fcf6c7;
+}
+
+.aboutHeader {
+  height: 100vh;
+}
+.aboutHeader .bio {
+  margin: 8rem 2rem 5rem 2rem;
+}
+.aboutHeader .verticalAbout {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  color: #fdee69;
+  letter-spacing: 0.7rem;
+  margin: 1.5rem;
+}
+
+.mainAbout {
+  padding-top: 5rem;
+}
+.mainAbout section {
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 8rem;
+}
+.mainAbout .hDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  height: 2rem;
+  padding-top: 4rem;
+  padding-left: 5rem;
+}
+.mainAbout .hDiv h3 {
+  font-size: 3rem;
+  margin: 0;
+}
+.mainAbout .hDiv .paraContainer {
+  height: 3rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}
+.mainAbout .hDiv .paraContainer .projectTitle,
+.mainAbout .hDiv .paraContainer .programs {
+  margin: 0;
+}
+.mainAbout .hDiv .paraContainer .programs {
+  color: #747474;
+}
+.mainAbout .summary {
+  width: 75%;
+  margin: 0 auto;
+}
+.mainAbout .paraDiv {
+  color: #747474;
+  width: 45%;
+  height: 15rem;
+  padding-top: 4rem;
+  padding-left: 6.5rem;
+}
+.mainAbout .paraDiv a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  margin-top: 2rem;
+}
+.mainAbout .paraDiv a i {
+  color: #14a76c;
+}
+.mainAbout .paraDiv a p {
+  text-decoration: none;
+  color: #ffe400;
+  margin: 0;
+  padding-left: 1rem;
+}
+.mainAbout .imgDiv {
+  width: 45%;
+  position: relative;
+  left: 1rem;
+  bottom: 1rem;
+  padding-left: 2rem;
+}
+.mainAbout .imgDiv img {
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: #ffe400;
+}
+footer a h4 {
+  font-size: 2rem;
+  text-align: right;
+}
+
+.contactHeader {
+  background: url(../assets/bgsample.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -100px;
+  height: 100vh;
+}
+.contactHeader .contactDiv {
+  width: 40%;
+  margin-left: 40rem;
+  margin-top: 25rem;
 }
 
 @-webkit-keyframes square {

@@ -7,13 +7,15 @@ $dark: #272727;
 $yellow: #ffe400;
 $orange: #ff652f;
 $green: #14a76c;
-$gray: #b9b9b9;
+$gray: #747474;
 
 
 // IMPORTS
 @import "./partials/setup";
 @import "./partials/nav";
 @import "./partials/header";
+@import "./partials/mainAbout";
+@import "./partials/mainContact";
 @import "./partials/animations";
 
 
