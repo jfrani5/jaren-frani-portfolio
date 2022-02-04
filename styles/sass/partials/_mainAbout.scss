@@ -59,7 +59,7 @@
       margin-bottom: 2rem;
    }
 
-   .firstProject {
+   .projects {
       margin-bottom: 0;
    }
 
@@ -171,6 +171,7 @@ footer {
 @media (max-width: 1100px) {
    .opacity {
       opacity: 0;
+      font-size: 1px;
    }
 
    .aboutHeader .verticalAbout {
@@ -204,6 +205,7 @@ footer {
 
    .verticalAbout {
       opacity: 0;
+      font-size: 1px;
    }
 
    .mainAbout {
@@ -222,24 +224,24 @@ footer {
       margin: 0 auto;
    }
 
-   .mainAbout .firstProject {
+   .mainAbout .projects {
       margin-bottom: 5rem;
    }
 
-   .mainAbout .firstProject .imgDiv {
+   .mainAbout .projects .imgDiv {
       margin: 3rem auto;
    }
 
-   .mainAbout .projects {
+   .mainAbout .projectTwo {
       margin-bottom: 7rem;
    }
 
-   .mainAbout .projects .imgDiv {
+   .mainAbout .projectTwo .imgDiv {
       margin: 5rem auto;
    }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 888px) {
    .aboutHeader .bio .bioImg {
       width: 65%;
    }
@@ -261,11 +263,11 @@ footer {
       bottom: 1rem;
    }
 
-   .mainAbout .projects .imgDiv {
+   .mainAbout .projectTwo .imgDiv {
       margin: 7rem auto;
    }
 
-   .mainAbout .firstProject .imgDiv {
+   .mainAbout .projects .imgDiv {
       margin: 2rem auto;
    }
 }
@@ -276,11 +278,11 @@ footer {
       padding-left: 5rem;
    }
 
-   .mainAbout .firstProject .imgDiv {
+   .mainAbout .projects .imgDiv {
       margin: 0rem auto;
    }
 
-   .mainAbout .projects .imgDiv {
+   .mainAbout .projectTwo .imgDiv {
       margin: 4rem auto;
    }
 
@@ -298,11 +300,11 @@ footer {
       width: 90%;
    }
 
-   .mainAbout .firstProject .imgDiv {
+   .mainAbout .projects .imgDiv {
       margin: 3rem auto;
    }
 
-   .mainAbout .projects .imgDiv {
+   .mainAbout .projectTwo .imgDiv {
       margin: 6rem auto;
    }
 
@@ -345,11 +347,11 @@ footer {
       width: 60%;    
    }
 
-   .mainAbout .firstProject .imgDiv {
+   .mainAbout .projects .imgDiv {
       margin: 5rem auto;
    }
 
-   .mainAbout .projects .imgDiv {
+   .mainAbout .projectTwo .imgDiv {
       margin: 10rem auto;
    }
 }
@@ -359,11 +361,23 @@ footer {
       height: 100%;
    }
 
-   .mainAbout .projects .imgDiv {
+   .mainAbout .paraDiv {
+      padding-top: 2rem;
+   }
+
+   .mainAbout .projectTwo .imgDiv {
       margin: 12rem auto;
    }
 
    .mainAbout {
       padding-top: 0;
+   }
+
+   .mainAbout .hDiv {
+      padding-top: 0;
+   }
+
+   .mainAbout .projects .imgDiv {
+      margin: 6rem auto;
    }
 }
