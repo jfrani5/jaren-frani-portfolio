@@ -443,21 +443,6 @@ nav ul a {
   line-height: 25px;
   margin: 0;
 }
-.aboutHeader .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.aboutHeader .icons ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-}
-.aboutHeader .icons ul li {
-  font-size: 1.5rem;
-  padding-right: 2rem;
-}
 .aboutHeader .verticalAbout {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
