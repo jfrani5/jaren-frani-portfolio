@@ -14,21 +14,26 @@
    <header class="wrapper aboutHeader">
       <nav>
          <a href="index.html">
-            <img src="../images/from-elora-pautrat-behance.PNG" alt="logo">
+            <img class="curly" src="./assets/logo.png" alt="logo of a letter j inside a curly bracket">
          </a>
       
          <ul>
             <li><a href="about.html">about</a></li>
-            <li><a href="contact.html">contact</a></li>
          </ul>
       </nav>
+      <!-- end of nav -->
 
       <section class="bio">
-         <h1>About me:</h1>
-         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, molestiae! Obcaecati sit quis commodi expedita quia? Ipsa illum repellendus ullam hic praesentium officia nam impedit, sequi inventore, animi vitae consequatur.
-         Voluptates, reiciendis minus esse non saepe omnis dolorem, voluptatibus quisquam qui, molestias porro vel commodi facilis voluptatem! Maiores iure ad culpa, exercitationem saepe expedita minima, quaerat dicta magni repudiandae et?
-         Numquam adipisci ullam sequi illo. Officiis asperiores est quo debitis nisi dicta? Eius iusto in beatae! Aliquam quaerat numquam alias ut, ipsum iusto quis repellendus, consequuntur atque harum sapiente dolor?</p>
+         <div class="bioImg">
+            <img src="./assets/about-me.png" alt="picture of myself wearing a denim jacket, black pants, and white shoes">
+         </div> <!-- end of .bioImg -->
+         
+         <div class="bioAboutMe">
+            <h1>About me:</h1>
+            <p>When I started this career change in year 2021, I had very little expectation of what the outcome will be. All my career years were spent working as a clerical support and I had no knowledge of any programming language whatsoever. And now, fast forwarding to the last day of the 9-week Web Development Bootcamp of Juno College of Technology, I am still surprise that I was able to do 5 projects in a span of 9 weeks. What amazes me more is I enjoyed every step of the development process from problem solving to seeing your very own website being live. I am very grateful and thrilled to start this new career journey and to continuously expand my skills and knowledge of Web Development.</p>
+         </div> <!-- end of .bioAboutMe -->
       </section>
+      <!-- end of .bio section -->
 
       <div class="verticalText verticalLine"></div>
       <h2 class="verticalAbout">scroll</h2>
@@ -36,126 +41,130 @@
       <div class="dot lighter"></div>
       <div class="dot lightest"></div>
    </header>
-
+   <!-- end of header -->
+   
    <main class="wrapper mainAbout">
-      <section class="firstProject projects">
+      <section class="firstProject">
          <div class="hDiv">
             <h3>1</h3>
             <div class="paraContainer">
                <p class="projectTitle">Project willow</p>
                <p class="programs">html, css, sass | 2021</p>
-            </div>
-         </div>
+            </div> <!-- end of .paraContainer -->
+         </div> <!-- end of .hDiv -->
+
          <div class="paraDiv">
             <p>About the project:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus ab voluptatibus alias impedit culpa sequi reiciendis, eaque, voluptas in temporibus aut nostrum a debitis velit dolorum! Quia, officiis fugiat.</p>
+            <p>For this project, we needed to convert the design provided into a multi-page, functional and responsive in all screen sizes website. Styling was required to be done in SASS. Accessibility is also an important part of this project among other things. </p>
             <a href="https://willow-project1.netlify.app/">
                <i class="fas fa-play"></i>
-               <p>Link here.</p>
+               <p>Link here</p>
             </a>
-         </div>
+         </div> <!-- end of .paradiv -->
 
          <div class="imgDiv">
             <img src="./assets/shotsnapp-one.png" alt="a snapshot of the homepage of project one website inside a mockup image of a laptop">
-         </div>
+         </div> <!-- end of .imgDiv -->
       </section>
-
-      <section class="secondProject projects">
+      
+      <section>
          <div class="hDiv">
             <h3>2</h3>
             <div class="paraContainer">
                <p class="projectTitle">Movie finder</p>
-               <p class="programs">html, css, sass, javascript | 2022</p>
-            </div>
-         </div>
+               <p class="programs">html, css, sass, javascript, APIs | 2022</p>
+            </div> <!-- end of .paraContainer -->
+         </div> <!-- end of .hDiv -->
+
          <div class="paraDiv">
             <p>About the project:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus ab voluptatibus alias impedit culpa
-               sequi reiciendis, eaque, voluptas in temporibus aut nostrum a debitis velit dolorum! Quia, officiis fugiat.</p>
+            <p>This was a paired programming project and we had to create a web application using JavaScipt and a third-party API. My project partner and I created a movie finder app that generates movie results based on the user's input. We used a second endpoint for our error handling and we embedded an iframe to get the trailer to appear on the page. App is responsive to all screen sizes and is accessible for screen readers.</p>
             <a href="https://movie-finder-app-p2.netlify.app/">
                <i class="fas fa-play"></i>
-               <p>Link here.</p>
+               <p>Link here</p>
             </a>
-         </div>
+         </div> <!-- end of .paradiv -->
          
          <div class="imgDiv">
             <img src="./assets/shotsnapp-two.png" alt="a snapshot of the homepage of project two website inside a mockup image of a laptop">
-         </div>
+         </div> <!-- end of .imgDiv -->
       </section>
 
-      <section class="thirdProject projects">
+      <section>
          <div class="hDiv">
             <h3>3</h3>
             <div class="paraContainer">
                <p class="projectTitle">React-ive events</p>
-               <p class="programs">css, react | 2022</p>
-            </div>
-         </div>
+               <p class="programs">css, react, APIs | 2022</p>
+            </div> <!-- end of .paraContainer -->
+         </div> <!-- end of .hDiv -->
+
          <div class="paraDiv">
             <p>About the project:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus ab voluptatibus alias impedit culpa
-               sequi reiciendis, eaque, voluptas in temporibus aut nostrum a debitis velit dolorum! Quia, officiis fugiat.</p>
+            <p>This is a work in progess. All the requirements for this projects where met but I will definitely add more functions to this to be a much more interactive app. For this project, we were to build an app entirely on React that will fetch results from a third-party API. App is responsive to all screen sizes and is accessible for screen readers.</p>
             <a href="https://events-app-project-3.netlify.app/">
                <i class="fas fa-play"></i>
-               <p>Link here.</p>
+               <p>Link here</p>
             </a>
-         </div>
+         </div> <!-- end of .paradiv -->
          
          <div class="imgDiv">
             <img src="./assets/shotsnapp-three.png" alt="a snapshot of the homepage of project three website inside a mockup image of a laptop">
-         </div>
+         </div> <!-- end of .imgDiv -->
       </section>
 
-      <section class="fourthProject projects">
+      <section>
          <div class="hDiv">
             <h3>4</h3>
             <div class="paraContainer">
                <p class="projectTitle">Backcronym</p>
-               <p class="programs">react, firebase | 2022</p>
-            </div>
-         </div>
+               <p class="programs">react, firebase, APIs | 2022</p>
+            </div> <!-- end of .paraContainer -->
+         </div> <!-- end of .hDiv -->
+
          <div class="paraDiv">
             <p>About the project:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus ab voluptatibus alias impedit culpa
-               sequi reiciendis, eaque, voluptas in temporibus aut nostrum a debitis velit dolorum! Quia, officiis fugiat.</p>
+            <p>This was a group project that was also required to be done in React. We were to build a backcronym generator that will get all the needed data from a third-party API and save that data to firebase which then will be retrieved to have that data displayed on the page. App is responsive to all screen sizes and is accessible for screen readers. </p>
             <a href="https://bbackronym.netlify.app/">
                <i class="fas fa-play"></i>
-               <p>Link here.</p>
+               <p>Link here</p>
             </a>
-         </div>
+         </div> <!-- end of .paradiv -->
          
          <div class="imgDiv">
             <img src="./assets/shotsnapp-four.png" alt="a snapshot of the homepage of project four website inside a mockup image of a laptop">
-         </div>
+         </div> <!-- end of .imgDiv -->
       </section>
 
-      <section class="extra projects">
+      <section>
          <div class="hDiv">
             <h3>5</h3>
             <div class="paraContainer">
                <p class="projectTitle">Soulful</p>
                <p class="programs">html, css, javascript | 2022</p>
-            </div>
-         </div>
+            </div> <!-- end of .paraContainer -->
+         </div> <!-- end of .hDiv -->
+
          <div class="paraDiv">
             <p>About the project:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus ab voluptatibus alias impedit culpa
-               sequi reiciendis, eaque, voluptas in temporibus aut nostrum a debitis velit dolorum! Quia, officiis fugiat.</p>
+            <p>This is also a work in progress. This website is not a part of the projects that were done in the Bootcamp. This was an extra project for myself that I made for my sister's small business. App is responsive to all screen sizes and is accessible for screen readers.</p>
             <a href="https://soulfulsample.netlify.app/">
                <i class="fas fa-play"></i>
-               <p>Link here.</p>
+               <p>Link here</p>
             </a>
-         </div>
+         </div> <!-- end of .paradiv -->
          
          <div class="imgDiv">
             <img src="./assets/shotsnapp-extra.png" alt="a snapshot of the homepage of soulful website inside a mockup image of a laptop">
          </div>
       </section>
    </main>
+   <!-- end of main -->
 
    <footer class="wrapper">
-      <a href="contact.html">
-         <h4>contact ></h4>
+      <p><strong>email: </strong> franijaren@gmail.com</p>
+      <a href="https://www.linkedin.com/in/jaren-frani-698b3214a/">
+         <p>Linked<i class="fab fa-linkedin"></i></p>
       </a>
    </footer>
 </body>

@@ -3,14 +3,34 @@
    height: 100vh;
 
    .bio {
-      margin: 8rem 2rem 5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 2rem;
+
+      .bioImg {
+         width: 55%;
+
+         img {
+            width: 100%;
+         }
+      }
+
+      .bioAboutMe {
+         width: 35%;
+
+         p {
+            color: $gray;
+            line-height: 25px;
+            margin: 0;
+         }
+      }
    }
 
    .verticalAbout {
       writing-mode: vertical-rl;
       color: #fdee69;
-      letter-spacing: 0.7rem;
-      margin: 1.5rem;
+      letter-spacing: 0.5rem;
+      margin: 1.4rem;
    }
 }
 
@@ -19,12 +39,14 @@
    padding-top: 5rem;
 
    section {
-      height: 25rem;
+      height: 30rem;
       display: flex;
       flex-wrap: wrap;
-      margin-bottom: 8rem;
+      margin-bottom: 2rem;
+   }
 
-      
+   .firstProject {
+      margin-bottom: 0;
    }
 
    .hDiv {
@@ -54,7 +76,6 @@
             color: $gray;
          }
       }
-
    }
 
    .summary {
@@ -66,8 +87,12 @@
       color: $gray;
       width: 45%;
       height: 15rem;
-      padding-top: 4rem;
+      padding-top: 2rem;
       padding-left: 6.5rem;
+
+      p {
+         line-height: 25px;
+      }
 
       a {
          display: flex;
@@ -91,25 +116,28 @@
       width: 45%;
       position: relative;
       left: 1rem;
-      bottom: 1rem;
+      bottom: 3rem;
       padding-left: 2rem;
 
       img {
          width: 100%;
       }
    }
-
 }
 
 footer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   font-size: 1.5rem;
+   padding-top: 2rem;
+
+   p {
+      letter-spacing: 3px;
+   }
 
    a {
-      text-decoration: none;
       color: $yellow;
-
-      h4 {
-         font-size: 2rem;
-         text-align: right;
-      }
+      text-decoration: none;
    }
 }

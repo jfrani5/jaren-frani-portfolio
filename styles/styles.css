@@ -244,7 +244,7 @@ nav {
           justify-content: space-between;
 }
 nav img {
-  max-width: 4rem;
+  max-width: 1.5rem;
   margin-top: 2rem;
 }
 nav ul {
@@ -291,8 +291,8 @@ nav ul a {
 .indexHeader .helloDiv .shapes .triangle {
   height: 0.5rem;
   border-bottom: 1.5rem solid #ffe400;
-  border-left: 0.8rem solid #272727;
-  border-right: 0.8rem solid #272727;
+  border-left: 0.8rem solid #181818;
+  border-right: 0.8rem solid #181818;
   -webkit-animation: triangle 1.5s ease-in forwards;
           animation: triangle 1.5s ease-in forwards;
 }
@@ -363,28 +363,50 @@ nav ul a {
   height: 100vh;
 }
 .aboutHeader .bio {
-  margin: 8rem 2rem 5rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 2rem;
+}
+.aboutHeader .bio .bioImg {
+  width: 55%;
+}
+.aboutHeader .bio .bioImg img {
+  width: 100%;
+}
+.aboutHeader .bio .bioAboutMe {
+  width: 35%;
+}
+.aboutHeader .bio .bioAboutMe p {
+  color: #747474;
+  line-height: 25px;
+  margin: 0;
 }
 .aboutHeader .verticalAbout {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   color: #fdee69;
-  letter-spacing: 0.7rem;
-  margin: 1.5rem;
+  letter-spacing: 0.5rem;
+  margin: 1.4rem;
 }
 
 .mainAbout {
   padding-top: 5rem;
 }
 .mainAbout section {
-  height: 25rem;
+  height: 30rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
+}
+.mainAbout .firstProject {
+  margin-bottom: 0;
 }
 .mainAbout .hDiv {
   display: -webkit-box;
@@ -421,8 +443,11 @@ nav ul a {
   color: #747474;
   width: 45%;
   height: 15rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-left: 6.5rem;
+}
+.mainAbout .paraDiv p {
+  line-height: 25px;
 }
 .mainAbout .paraDiv a {
   display: -webkit-box;
@@ -444,33 +469,31 @@ nav ul a {
   width: 45%;
   position: relative;
   left: 1rem;
-  bottom: 1rem;
+  bottom: 3rem;
   padding-left: 2rem;
 }
 .mainAbout .imgDiv img {
   width: 100%;
 }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+footer p {
+  letter-spacing: 3px;
+}
 footer a {
-  text-decoration: none;
   color: #ffe400;
-}
-footer a h4 {
-  font-size: 2rem;
-  text-align: right;
-}
-
-.contactHeader {
-  background: url(../assets/bgsample.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: -100px;
-  height: 100vh;
-}
-.contactHeader .contactDiv {
-  width: 40%;
-  margin-left: 40rem;
-  margin-top: 25rem;
+  text-decoration: none;
 }
 
 @-webkit-keyframes square {
@@ -872,7 +895,7 @@ html {
 
 body {
   color: #ffe400;
-  background: #272727;
+  background: #181818;
   font-family: "Share Tech", sans-serif;
 }
 
