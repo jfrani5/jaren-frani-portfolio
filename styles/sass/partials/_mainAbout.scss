@@ -355,11 +355,15 @@ footer {
 }
 
 @media (max-width: 435px) {
+   .aboutHeader {
+      height: 100%;
+   }
+
    .mainAbout .projects .imgDiv {
       margin: 12rem auto;
    }
 
    .mainAbout {
-      padding-top: 8rem;
+      padding-top: 0;
    }
 }
