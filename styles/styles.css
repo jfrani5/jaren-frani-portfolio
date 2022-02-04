@@ -359,6 +359,65 @@ nav ul a {
   background: #fcf6c7;
 }
 
+@media (max-width: 1200px) {
+  .indexHeader .helloDiv .shapes {
+    width: 35%;
+  }
+
+  .indexHeader .seeWork {
+    margin-left: 29.5rem;
+  }
+}
+@media (max-width: 1165px) {
+  .indexHeader .helloDiv .shapes .square,
+.indexHeader .helloDiv .shapes .triangle,
+.indexHeader .helloDiv .shapes .line,
+.indexHeader .helloDiv .shapes .circle {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+@media (max-width: 1000px) {
+  .indexHeader .seeWork {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50%;
+    margin: 3rem auto;
+  }
+
+  .indexHeader .helloDiv h1 {
+    padding: 8rem 10rem 1rem 10rem;
+  }
+}
+@media (max-width: 865px) {
+  .indexHeader .helloDiv h1 {
+    padding: 8rem 5rem 0 5rem;
+  }
+}
+@media (max-width: 640px) {
+  .indexHeader .helloDiv h1 {
+    padding: 5rem 3rem 0 3rem;
+  }
+
+  .indexHeader .helloDiv .shapes {
+    width: 50%;
+  }
+}
+@media (max-width: 450px) {
+  .indexHeader .helloDiv h1 {
+    padding: 5rem 1rem 0 1rem;
+  }
+
+  .indexHeader .helloDiv .shapes {
+    width: 70%;
+  }
+}
 .aboutHeader {
   height: 100vh;
 }
@@ -383,6 +442,21 @@ nav ul a {
   color: #747474;
   line-height: 25px;
   margin: 0;
+}
+.aboutHeader .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.aboutHeader .icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+.aboutHeader .icons ul li {
+  font-size: 1.5rem;
+  padding-right: 2rem;
 }
 .aboutHeader .verticalAbout {
   -webkit-writing-mode: vertical-rl;
