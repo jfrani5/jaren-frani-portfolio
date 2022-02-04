@@ -777,6 +777,10 @@ footer a {
   .mainAbout .projects .imgDiv {
     margin: 6rem auto;
   }
+
+  .mainAbout .smallScreen .imgDiv {
+    margin: 8rem auto;
+  }
 }
 @-webkit-keyframes square {
   0% {
