@@ -62,6 +62,13 @@
          text-decoration: none;
          color: $yellow;
       }
+
+      a:hover, 
+      a:focus {
+         color: $green;
+         padding: 0.5rem;
+         border: 2px solid $yellow;
+      }
    }
 
    h2 {
@@ -112,25 +119,29 @@
 }
 
 @media (max-width: 1165px) {
-   .indexHeader .helloDiv .shapes .square,
-   .indexHeader .helloDiv .shapes .triangle,
-   .indexHeader .helloDiv .shapes .line,
-   .indexHeader .helloDiv .shapes .circle {
-      animation: none;
+   .indexHeader .helloDiv .shapes {
+      .square,
+      .triangle,
+      .line,
+      .circle {
+         animation: none;
+      }
    }
 }
 
 @media (max-width: 1000px) {
-   .indexHeader .seeWork {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 50%;
-      margin: 3rem auto;
-   }
+   .indexHeader {
+      .seeWork {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         width: 50%;
+         margin: 3rem auto;
+      }
 
-   .indexHeader .helloDiv h1 {
-      padding: 8rem 10rem 1rem 10rem;
+      .helloDiv h1 {
+         padding: 8rem 10rem 1rem 10rem;
+      }
    }
 }
 
@@ -141,22 +152,27 @@
 }
 
 @media (max-width: 640px) {
-   .indexHeader .helloDiv h1 {
-      padding: 5rem 3rem 0 3rem;
-   }
-   
-   .indexHeader .helloDiv .shapes {
-      width: 50%;
+   .indexHeader .helloDiv {
+      h1 {
+         padding: 5rem 3rem 0 3rem;
+      }
+      .shapes {
+         width: 50%;
+      }
+      .seeWork {
+         width: 75%;
+      }
    }
 }
 
 @media (max-width: 450px) {
-   .indexHeader .helloDiv h1 {
-      padding: 5rem 1rem 0 1rem;
-   }
-
-   .indexHeader .helloDiv .shapes {
-      width: 70%;
+   .indexHeader .helloDiv {
+      h1 {
+         padding: 5rem 1rem 0 1rem;
+      }
+      .shapes {
+         width: 70%;
+      }
    }
 }
 

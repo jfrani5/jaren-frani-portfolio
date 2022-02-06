@@ -7,7 +7,20 @@ $dark: #181818;
 $yellow: #ffe400;
 $orange: #ff652f;
 $green: #14a76c;
-$gray: #747474;
+$gray: #949494;
+
+
+// MIXINS
+@mixin before($number) {
+   content: $number;
+   color: #ffe400;
+   display: block;
+   position: relative;
+   left: -2rem;
+   top: 3.4rem;
+   font-size: 3.5rem;
+   font-weight: bold;
+}
 
 
 // IMPORTS
