@@ -417,18 +417,23 @@ nav ul a:focus {
 }
 @media (max-width: 640px) {
   .indexHeader .helloDiv h1 {
-    padding: 5rem 3rem 0 3rem;
+    padding: 7rem 3rem 0 3rem;
   }
   .indexHeader .helloDiv .shapes {
     width: 50%;
   }
-  .indexHeader .helloDiv .seeWork {
-    width: 75%;
+
+  .indexHeader .seeWork {
+    width: 100%;
+    margin: 5rem auto;
+  }
+  .indexHeader .omit {
+    display: none;
   }
 }
 @media (max-width: 450px) {
   .indexHeader .helloDiv h1 {
-    padding: 5rem 1rem 0 1rem;
+    padding: 7rem 1rem 0 1rem;
   }
   .indexHeader .helloDiv .shapes {
     width: 70%;
@@ -508,7 +513,7 @@ nav ul a:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
 }
 .mainAbout .icons {
   margin: 3rem 0 7rem 0;
