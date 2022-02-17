@@ -97,6 +97,10 @@
 
 // Media Queries 
 @media (max-width: 950px) {
+   .contact .contactSection .emailLinkDiv p {
+      margin-left: 0;
+   }
+
    .contact .contactSection {
       .emailLinkDiv,
       .formDiv {

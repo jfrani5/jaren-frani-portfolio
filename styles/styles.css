@@ -922,6 +922,10 @@ nav .mediaQuery a:focus {
 }
 
 @media (max-width: 950px) {
+  .contact .contactSection .emailLinkDiv p {
+    margin-left: 0;
+  }
+
   .contact .contactSection .emailLinkDiv,
 .contact .contactSection .formDiv {
     width: 100%;
@@ -933,13 +937,15 @@ footer {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 footer div {
-  width: 8rem;
+  width: 7rem;
+  text-align: center;
 }
 footer a {
   color: #949494;
@@ -950,7 +956,7 @@ footer a {
 footer a:hover,
 footer a:focus {
   color: #14a76c;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .contactFooter {

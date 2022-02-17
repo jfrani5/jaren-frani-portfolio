@@ -2,12 +2,13 @@
 footer {
    display: flex;
    flex-wrap: wrap;
-   justify-content: space-around;
+   justify-content: space-between;
    font-size: 1.5rem;
-   margin-bottom: 2rem;
+   padding-bottom: 2rem;
 
    div {
-      width: 8rem;
+      width: 7rem;
+      text-align: center;
    }
 
    a {
@@ -19,7 +20,7 @@ footer {
    a:hover, 
    a:focus {
       color: $green;
-      font-size: 1.8rem;
+      font-size: 1.7rem;
    }
 }
 
