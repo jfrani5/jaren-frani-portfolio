@@ -906,6 +906,7 @@ nav .mediaQuery a:focus {
   height: 10rem;
 }
 .contact .contactSection .formDiv form button {
+  color: black;
   font-family: "Share Tech", sans-serif;
   cursor: pointer;
   width: 100%;
@@ -913,6 +914,12 @@ nav .mediaQuery a:focus {
   border: none;
   border-radius: 5px;
   padding: 0.3rem 0.5rem;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+.contact .contactSection .formDiv form button:hover,
+.contact .contactSection .formDiv form button:focus {
+  background: #14a76c;
 }
 .contact h3 {
   font-size: 2rem;
