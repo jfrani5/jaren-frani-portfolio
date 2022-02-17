@@ -1,0 +1,36 @@
+// Footer
+footer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   font-size: 1.5rem;
+   margin-bottom: 2rem;
+
+   div {
+      width: 8rem;
+   }
+
+   a {
+      color: $gray;
+      text-decoration: none;
+      transition: all 0.2s ease-out 0s;
+   }
+
+   a:hover, 
+   a:focus {
+      color: $green;
+      font-size: 1.8rem;
+   }
+}
+
+.contactFooter {
+   justify-content: flex-start;
+   padding: 2rem 0;
+}
+
+// Media Queries
+@media (max-width: 520px) {
+   footer {
+      font-size: 1.3rem;
+   }
+}

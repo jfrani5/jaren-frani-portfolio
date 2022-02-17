@@ -1,0 +1,103 @@
+// Project section
+.mainAbout {
+   .projects {
+      justify-content: space-between;
+      margin-bottom: 4rem;
+      margin-left: 1.5rem;
+   }
+
+   .wholeText {
+      width: 45%;
+
+      h2 {
+         margin: 0;
+      }
+
+      p {
+         color: $gray;
+      }
+
+      .paraContainer p {
+         margin: 0;
+      }
+
+      .one::before {
+         @include before("1");
+      }
+
+      .two::before {
+         @include before("2");
+      }
+
+      .three::before {
+         @include before("3");
+      }
+
+      .four::before {
+         @include before("4");
+      }
+
+      .five::before {
+         @include before("5");
+      }
+
+      .paraDiv {
+         p {
+            line-height: 1.3rem;
+         }
+
+         .externalLink {
+            margin-top: 2rem;
+
+            a {
+               text-decoration: none;
+               color: $yellow;
+               font-size: 2rem;
+               margin-right: 3rem;
+            }
+
+            a:hover,
+            a:focus {
+               color: $green;
+            }
+         }
+      }
+      
+   }
+
+   .imgDiv {
+      display: flex;
+      align-items: center;
+      width: 45%;
+
+      img {
+         width: 100%;
+      }
+   }
+}
+
+// Media Queries
+@media (max-width: 900px) {
+   .mainAbout {
+      .projects {
+         flex-direction: column;
+         justify-content: center;
+         margin-bottom: 0;
+      }
+
+      .wholeText {
+         width: 100%;
+      }
+
+      .imgDiv {
+         width: 85%;
+         margin: 0 auto;
+      }
+   }
+}
+
+@media (max-width: 600px) {
+   .mainAbout .imgDiv {
+      width: 100%;
+   }
+}

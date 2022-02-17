@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Page</title>
+   <link rel="stylesheet" href="styles/styles.css">
+   <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+   <link type="image" href="./assets/fav.PNG" rel="icon">
+</head>
+<body>
+   <header class="wrapper">
+      <nav>
+         <a href="index.html">
+            <img class="curly" src="./assets/logo.png" alt="logo of a letter j inside a curly bracket">
+         </a>
+   
+         <ul class="mediaQuery">
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+         </ul>
+   
+         <input id="menuToggle" type="checkbox" />
+   
+         <label class="menuContainer" for="menuToggle">
+            <div class="burger"></div>
+         </label>
+   
+         <ul class="menu">
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+         </ul>
+      </nav>
+      <!-- end of nav -->
+   </header>
+   <!-- end of header -->
+
+   <main class="wrapper contact">
+      <section class="contactGreet">
+         <h1>Contact</h1>
+         <p>Questions or want to chat? Send me a message!</p>
+      </section> <!-- end of contactGreet -->
+      
+      <section class="contactSection">
+         <div class="emailLinkDiv">
+            <div class="contactEmail">
+               <h2>Reach me by email:</h2>
+               <p>franijaren@gmail.com</p>
+            </div>
+
+            <div>
+               <h2>Connect with me through LinkedIn:</h2>
+               <a href="https://www.linkedin.com/in/jaren-frani/">
+                  <p>Linked<i class="fab fa-linkedin"></i></p>
+               </a>
+            </div>
+         </div> <!-- end of .emailLinkDiv -->
+
+         <div class="formDiv">
+            <h2>Send a quick message here:</h2>
+            <form name="contact" method="POST" data-netlify="true">
+               <label for="userName"></label>
+               <input type="text" class="userName" placeholder="Name" required="true">
+
+               <label for="userEmail"></label>
+               <input type="text" class="userEmail" placeholder="Email address" required="true">
+
+               <textarea name="messageInput" id="messageInput" placeholder="Message" maxlength="200" required="true"></textarea>
+
+               <button type="submit">Submit</button>
+            </form>
+         </div> <!-- end of .formDiv -->
+      </section>
+
+      <h3>Thank you for visiting my portfolio!</h3>
+   </main>
+   <!-- end of main -->
+
+   <footer class="wrapper contactFooter">
+      <div><a href="projects.html">< Projects</a></div>
+   </footer>
+</body>
+</html>

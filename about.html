@@ -8,8 +8,8 @@
    <link rel="stylesheet" href="styles/styles.css">
    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-   <link type="image" href="assets/from-studio-tikamon-site.PNG" rel="icon">
+   integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+   <link type="image" href="./assets/fav.PNG" rel="icon">
 </head>
 <body>
    <header class="wrapper aboutHeader">
@@ -18,8 +18,22 @@
             <img class="curly" src="./assets/logo.png" alt="logo of a letter j inside a curly bracket">
          </a>
       
-         <ul>
+         <ul class="mediaQuery">
             <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+         </ul>
+         
+         <input id="menuToggle" type="checkbox" />
+         
+         <label class="menuContainer" for="menuToggle">
+            <div class="burger"></div>
+         </label>
+         
+         <ul class="menu">
+            <li><a href="about.html">about</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
          </ul>
       </nav>
       <!-- end of nav -->
@@ -48,7 +62,7 @@
    <!-- end of header -->
    
    <main class="wrapper mainAbout">
-      <h2>Skills</h2>
+      <h2 class="skills">Skills</h2>
 
       <section class="icons">
          <ul>
@@ -98,158 +112,12 @@
             </li>
          </ul>
       </section>
-
-      <h2>Projects</h2>
-
-      <section class="projects space">
-         <div class="wholeText">
-            <div class="paraContainer one">
-               <h3>Project Willow</h3>
-               <p>html, css, sass | 2021</p>
-            </div> <!-- end of .paraContainer -->
-
-            <div class="paraDiv">
-               <p>About the project:</p>
-               <p>For this project, we needed to convert the design provided into a multi-page, functional and responsive in all screen sizes website. Styling was required to be done in SASS. Accessibility is also an important part of this project among other things. </p>
-               <div class="externalLink">
-                  <a href="https://github.com/jfrani5/jaren-frani-project-1.git">
-                     <i class="fab fa-github" aria-label="link to github"></i>
-                  </a>
-                  <a href="https://willow-project1.netlify.app/">
-                     <i class="fas fa-share-square" aria-label="link to website"></i>
-                  </a>
-               </div> <!-- end of .externalLink -->
-            </div> <!-- end of .paradiv -->
-         </div> <!-- end of .wholeText -->
-
-         <div class="imgDiv">
-            <img src="./assets/shotsnapp-one.png" alt="a snapshot of the homepage of project one website inside a mockup image of a laptop">
-         </div> <!-- end of .imgDiv -->
-      </section>
-      
-      <section class="projects">
-         <div class="wholeText">
-            <div class="paraContainer two">
-               <h3>Movie finder</h3>
-               <p>html, sass, javascript, api | 2022</p>
-            </div> <!-- end of .paraContainer -->
-         
-            <div class="paraDiv">
-               <p>About the project:</p>
-               <p>This was a paired programming project and we had to create a web application using JavaScipt and a third-party API.
-                  My project partner and I created a movie finder app that generates movie results based on the user's input. We used a
-                  second endpoint for our error handling and we embedded an iframe to get the trailer to appear on the page. App is
-                  responsive to all screen sizes and is accessible for screen readers.</p>
-               <p>Built with: Linda Shen</p>
-               <div class="externalLink">
-                  <a href="https://github.com/P2-Movie-App/movie-finder-app.git">
-                     <i class="fab fa-github" aria-label="link to github"></i>
-                  </a>
-                  <a href="https://movie-finder-app-p2.netlify.app/">
-                     <i class="fas fa-share-square" aria-label="link to website"></i>
-                  </a>
-               </div> <!-- end of .externalLink -->
-            </div> <!-- end of .paradiv -->
-         </div> <!-- end of .wholeText -->
-         
-         <div class="imgDiv">
-            <img src="./assets/shotsnapp-two.png" alt="a snapshot of the homepage of project two website inside a mockup image of a laptop">
-         </div> <!-- end of .imgDiv -->
-      </section>
-
-      <section class="projects">
-         <div class="wholeText">
-            <div class="paraContainer three">
-               <h3>React-ive Events</h3>
-               <p>react, css, APIs | 2022</p>
-            </div> <!-- end of .paraContainer -->
-         
-            <div class="paraDiv">
-               <p>About the project:</p>
-               <p>This is a work in progess. All the requirements for this projects where met but I will definitely add more functions
-                  to this to be a much more interactive app. For this project, we were to build an app entirely on React that will
-                  fetch results from a third-party API. App is responsive to all screen sizes and is accessible for screen readers.</p>
-               <div class="externalLink">
-                  <a href="https://github.com/jfrani5/jaren-frani-project-3.git">
-                     <i class="fab fa-github" aria-label="link to github"></i>
-                  </a>
-                  <a href="https://events-app-project-3.netlify.app/">
-                     <i class="fas fa-share-square" aria-label="link to website"></i>
-                  </a>
-               </div> <!-- end of .externalLink -->
-            </div> <!-- end of .paradiv -->
-         </div> <!-- end of .wholeText -->
-         
-         <div class="imgDiv">
-            <img src="./assets/shotsnapp-three.png" alt="a snapshot of the homepage of project three website inside a mockup image of a laptop">
-         </div> <!-- end of .imgDiv -->
-      </section>
-
-      <section class="projects">
-         <div class="wholeText">
-            <div class="paraContainer four">
-               <h3>Backcronym</h3>
-               <p>react, firebase, APIs | 2022</p>
-            </div> <!-- end of .paraContainer -->
-         
-            <div class="paraDiv">
-               <p>About the project:</p>
-               <p>This was a group project that was also required to be done in React. We were to build a backcronym generator that
-                  will get all the needed data from a third-party API and save that data to firebase which then will be retrieved to
-                  have that data displayed on the page. App is responsive to all screen sizes and is accessible for screen readers.
-               </p>
-               <p>Built with: Saana Selvan, Akeem Foster, and Andre Shotwell</p>
-               <div class="externalLink">
-                  <a href="https://github.com/Juno-College-Project4/Backronym-Generator.git">
-                     <i class="fab fa-github" aria-label="link to github"></i>
-                  </a>
-                  <a href="https://bbackronym.netlify.app/">
-                     <i class="fas fa-share-square" aria-label="link to website"></i>
-                  </a>
-               </div> <!-- end of .externalLink -->
-            </div> <!-- end of .paradiv -->
-         </div> <!-- end of .wholeText -->
-         
-         <div class="imgDiv">
-            <img src="./assets/shotsnapp-four.png" alt="a snapshot of the homepage of project four website inside a mockup image of a laptop">
-         </div> <!-- end of .imgDiv -->
-      </section>
-
-      <section class="projects">
-         <div class="wholeText">
-            <div class="paraContainer five">
-               <h3>Soulful</h3>
-               <p>html, css, javascript | 2022</p>
-            </div> <!-- end of .paraContainer -->
-         
-            <div class="paraDiv">
-               <p>About the project:</p>
-               <p>This is also a work in progress. This website is not a part of the projects that were done in the Bootcamp. This was
-                  an extra project for myself that I made for my sister's small business. App is responsive to all screen sizes and is
-                  accessible for screen readers.</p>
-               <div class="externalLink">
-                  <a href="https://github.com/jfrani5/soulful.git">
-                     <i class="fab fa-github" aria-label="link to github"></i>
-                  </a>
-                  <a href="https://soulfulsample.netlify.app/">
-                     <i class="fas fa-share-square" aria-label="link to website"></i>
-                  </a>
-               </div> <!-- end of .externalLink -->
-            </div> <!-- end of .paradiv -->
-         </div> <!-- end of .wholeText -->
-         
-         <div class="imgDiv">
-            <img src="./assets/shotsnapp-extra.png" alt="a snapshot of the homepage of soulful website inside a mockup image of a laptop">
-         </div>
-      </section>
    </main>
    <!-- end of main -->
 
-   <footer class="wrapper">
-      <p><strong>email: </strong> franijaren@gmail.com</p>
-      <a href="https://www.linkedin.com/in/jaren-frani-698b3214a/">
-         <p>Linked<i class="fab fa-linkedin"></i></p>
-      </a>
+   <footer>
+      <div><a href="index.html">< Home</a></div>
+      <div><a href="projects.html">Projects ></a></div>
    </footer>
 </body>
 </html>

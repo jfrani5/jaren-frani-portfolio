@@ -1,7 +1,5 @@
 // Header for about.html
 .aboutHeader {
-   height: 100vh;
-
    .bio {
       display: flex;
       flex-wrap: wrap;
@@ -32,7 +30,7 @@
    .arrow {
       display: flex;
       justify-content: center;
-      padding: 3rem 0 4rem 0;
+      padding: 3rem 0 2rem 0;
 
       i {
          font-size: 2.5em;
@@ -43,11 +41,12 @@
    }
 }
 
-// Main section for about.html
+// Main section 
 .mainAbout {
-   padding-top: 1rem;
+   padding: 3rem 0 7rem 0;
 
-   h2 {
+   h1,
+   .skills {
       font-size: 2.5rem;
       letter-spacing: 0.5rem;
       text-align: center;
@@ -58,19 +57,7 @@
       flex-wrap: wrap;
    }
 
-   .space {
-      padding-top: 2rem;
-   }
-
-   .projects {
-      justify-content: space-between;
-      margin-bottom: 4rem;
-      margin-left: 1.5rem;
-   }
-
    .icons {
-      margin: 3rem 0 7rem 0;
-      
       ul {
          display: flex;
          flex-wrap: wrap;
@@ -94,101 +81,6 @@
          }
       }
    }
-
-   .wholeText {
-      width: 45%;
-
-      h3 {
-         margin: 0;
-      }
-
-      p {
-         color: $gray;
-      }
-
-      .paraContainer p {
-         margin: 0;
-      }
-
-      .one::before {
-         @include before("1");
-      }
-
-      .two::before {
-         @include before("2");
-      }
-
-      .three::before {
-         @include before("3");
-      }
-
-      .four::before {
-         @include before("4");
-      }
-
-      .five::before {
-         @include before("5");
-      }
-
-      .paraDiv {
-         p {
-            line-height: 1.3rem;
-         }
-
-         .externalLink {
-            margin-top: 2rem;
-
-            a {
-               text-decoration: none;
-               color: $yellow;
-               font-size: 2rem;
-               margin-right: 3rem;
-            }
-
-            a:hover,
-            a:focus {
-               color: $green;
-               font-size: 2.5rem;
-            }
-         }
-      }
-      
-   }
-
-   .imgDiv {
-      display: flex;
-      align-items: center;
-      width: 45%;
-
-      img {
-         width: 100%;
-      }
-   }
-}
-
-footer {
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: space-evenly;
-   font-size: 1.5rem;
-   padding-top: 2rem;
-
-   p {
-      letter-spacing: 3px;
-   }
-
-   a {
-      color: $yellow;
-      text-decoration: none;
-   }
-
-   a:hover, 
-   a:focus {
-      color: $green;
-      font-size: 2rem;
-      position: relative;
-      bottom: 1rem;
-   }
 }
 
 // Media queries
@@ -209,40 +101,6 @@ footer {
          }
       }
    }
-
-   .mainAbout {
-      .projects {
-         flex-direction: column;
-         justify-content: center;
-         margin-bottom: 0;
-      }
-
-      .space {
-         padding-top: 0;
-      }
-
-      .wholeText {
-         width: 100%;
-      }
-
-      .imgDiv {
-         width: 85%;
-         margin: 0 auto;
-      }
-   }
-
-   footer {
-      flex-direction: column;
-      text-align: center;
-
-      p {
-         margin: 0;
-      }
-
-      a {
-         margin: 1rem;
-      }
-   }
 }
 
 @media (max-width: 676px) {
@@ -260,16 +118,8 @@ footer {
          }
       }
    }
-
-   .mainAbout .imgDiv {
-      width: 100%;
-   }
 }
 
-@media (max-width: 520px) {
-   footer {
-      font-size: 1.3rem;
-   }
-}
+
 
 

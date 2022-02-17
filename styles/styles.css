@@ -239,6 +239,8 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -252,22 +254,160 @@ nav img:focus {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-nav ul {
+nav .mediaQuery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 2rem 0 0 0;
 }
-nav ul a {
+nav .mediaQuery a {
+  width: 4rem;
+  display: inline-block;
   color: #ffe400;
   margin-left: 2.5rem;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
 }
-nav ul a:hover,
-nav ul a:focus {
+nav .mediaQuery a:hover,
+nav .mediaQuery a:focus {
   color: #14a76c;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
+.menu {
+  display: none;
+}
+.menu a {
+  color: #181818;
+  padding: 1rem;
+}
+.menu a:hover,
+.menu a:focus {
+  color: #14a76c;
+  font-size: 1.2rem;
+}
+
+#menuToggle {
+  display: none;
+}
+
+#menuToggle:checked + .menuContainer .burger::before {
+  margin-top: 0;
+  -webkit-transform: rotate(405deg);
+          transform: rotate(405deg);
+}
+
+#menuToggle:checked + .menuContainer .burger {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menuToggle:checked + .menuContainer .burger::after {
+  margin-top: 0;
+  -webkit-transform: rotate(-405deg);
+          transform: rotate(-405deg);
+}
+
+.menuContainer {
+  display: none;
+  color: #ffe400;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 1rem 0 0;
+}
+
+.burger::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.burger::after {
+  content: "";
+  margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+  nav .mediaQuery {
+    display: none;
+  }
+
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-top: 5rem;
+    padding: 0;
+  }
+  .menu li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #181818;
+    background-color: #ffe400;
+    margin: 0 1rem;
+  }
+
+  .menuContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  #menuToggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-transition: height 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: height 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menuToggle:checked ~ .menu li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid #333;
+    height: 5rem;
+    -webkit-transition: height 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: height 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .burger,
+.burger::before,
+.burger::after {
+    background-color: #ffe400;
+    position: absolute;
+    height: 4px;
+    width: 35px;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+
+  .burger:hover,
+.burger:focus {
+    background-color: #14a76c;
+  }
+}
 .indexHeader {
   height: 100vh;
 }
@@ -417,7 +557,7 @@ nav ul a:focus {
 }
 @media (max-width: 640px) {
   .indexHeader .helloDiv h1 {
-    padding: 7rem 3rem 0 3rem;
+    padding: 10rem 3rem 0 3rem;
   }
   .indexHeader .helloDiv .shapes {
     width: 50%;
@@ -438,9 +578,6 @@ nav ul a:focus {
   .indexHeader .helloDiv .shapes {
     width: 70%;
   }
-}
-.aboutHeader {
-  height: 100vh;
 }
 .aboutHeader .bio {
   display: -webkit-box;
@@ -480,7 +617,7 @@ nav ul a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 3rem 0 4rem 0;
+  padding: 3rem 0 2rem 0;
 }
 .aboutHeader .arrow i {
   font-size: 2.5em;
@@ -491,9 +628,10 @@ nav ul a:focus {
 }
 
 .mainAbout {
-  padding-top: 1rem;
+  padding: 3rem 0 7rem 0;
 }
-.mainAbout h2 {
+.mainAbout h1,
+.mainAbout .skills {
   font-size: 2.5rem;
   letter-spacing: 0.5rem;
   text-align: center;
@@ -504,19 +642,6 @@ nav ul a:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-.mainAbout .space {
-  padding-top: 2rem;
-}
-.mainAbout .projects {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 4rem;
-  margin-left: 1.5rem;
-}
-.mainAbout .icons {
-  margin: 3rem 0 7rem 0;
 }
 .mainAbout .icons ul {
   display: -webkit-box;
@@ -542,10 +667,49 @@ nav ul a:focus {
   font-size: 1rem;
   color: #949494;
 }
+
+@media (max-width: 900px) {
+  .aboutHeader {
+    height: 100%;
+  }
+  .aboutHeader .bio {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .aboutHeader .bio .bioImg {
+    width: 60%;
+  }
+  .aboutHeader .bio .bioAboutMe {
+    width: 80%;
+  }
+}
+@media (max-width: 676px) {
+  .mainAbout .icons ul li {
+    width: 5rem;
+  }
+}
+@media (max-width: 600px) {
+  .aboutHeader .bio .bioImg,
+.aboutHeader .bio .bioAboutMe {
+    width: 100%;
+  }
+}
+.mainAbout .projects {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4rem;
+  margin-left: 1.5rem;
+}
 .mainAbout .wholeText {
   width: 45%;
 }
-.mainAbout .wholeText h3 {
+.mainAbout .wholeText h2 {
   margin: 0;
 }
 .mainAbout .wholeText p {
@@ -619,7 +783,6 @@ nav ul a:focus {
 .mainAbout .wholeText .paraDiv .externalLink a:hover,
 .mainAbout .wholeText .paraDiv .externalLink a:focus {
   color: #14a76c;
-  font-size: 2.5rem;
 }
 .mainAbout .imgDiv {
   display: -webkit-box;
@@ -634,53 +797,7 @@ nav ul a:focus {
   width: 100%;
 }
 
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  font-size: 1.5rem;
-  padding-top: 2rem;
-}
-footer p {
-  letter-spacing: 3px;
-}
-footer a {
-  color: #ffe400;
-  text-decoration: none;
-}
-footer a:hover,
-footer a:focus {
-  color: #14a76c;
-  font-size: 2rem;
-  position: relative;
-  bottom: 1rem;
-}
-
 @media (max-width: 900px) {
-  .aboutHeader {
-    height: 100%;
-  }
-  .aboutHeader .bio {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .aboutHeader .bio .bioImg {
-    width: 60%;
-  }
-  .aboutHeader .bio .bioAboutMe {
-    width: 80%;
-  }
-
   .mainAbout .projects {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -691,9 +808,6 @@ footer a:focus {
             justify-content: center;
     margin-bottom: 0;
   }
-  .mainAbout .space {
-    padding-top: 0;
-  }
   .mainAbout .wholeText {
     width: 100%;
   }
@@ -701,36 +815,151 @@ footer a:focus {
     width: 85%;
     margin: 0 auto;
   }
-
-  footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-  }
-  footer p {
-    margin: 0;
-  }
-  footer a {
-    margin: 1rem;
-  }
-}
-@media (max-width: 676px) {
-  .mainAbout .icons ul li {
-    width: 5rem;
-  }
 }
 @media (max-width: 600px) {
-  .aboutHeader .bio .bioImg,
-.aboutHeader .bio .bioAboutMe {
-    width: 100%;
-  }
-
   .mainAbout .imgDiv {
     width: 100%;
   }
 }
+.contact {
+  padding: 3rem 0;
+}
+.contact p {
+  color: #949494;
+}
+.contact .contactGreet {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.contact .contactGreet h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 0;
+}
+.contact .contactSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact .contactSection .emailLinkDiv {
+  width: 49%;
+}
+.contact .contactSection .emailLinkDiv div {
+  margin-bottom: 5rem;
+}
+.contact .contactSection .emailLinkDiv p {
+  letter-spacing: 0.3rem;
+  width: 8rem;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+.contact .contactSection .emailLinkDiv a {
+  text-decoration: none;
+}
+.contact .contactSection .emailLinkDiv a p:hover,
+.contact .contactSection .emailLinkDiv a p:focus {
+  color: #14a76c;
+  font-size: 1.3rem;
+}
+.contact .contactSection .formDiv {
+  width: 49%;
+}
+.contact .contactSection .formDiv form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.contact .contactSection .formDiv form input,
+.contact .contactSection .formDiv form textarea {
+  width: 100%;
+  margin-bottom: 0.1rem;
+  padding: 0.5rem;
+  border: 1px solid #ffe400;
+  border-radius: 5px;
+  background: #949494;
+}
+.contact .contactSection .formDiv form input::-webkit-input-placeholder, .contact .contactSection .formDiv form textarea::-webkit-input-placeholder {
+  font-family: "Share Tech", sans-serif;
+}
+.contact .contactSection .formDiv form input::-moz-placeholder, .contact .contactSection .formDiv form textarea::-moz-placeholder {
+  font-family: "Share Tech", sans-serif;
+}
+.contact .contactSection .formDiv form input:-ms-input-placeholder, .contact .contactSection .formDiv form textarea:-ms-input-placeholder {
+  font-family: "Share Tech", sans-serif;
+}
+.contact .contactSection .formDiv form input::-ms-input-placeholder, .contact .contactSection .formDiv form textarea::-ms-input-placeholder {
+  font-family: "Share Tech", sans-serif;
+}
+.contact .contactSection .formDiv form input::placeholder,
+.contact .contactSection .formDiv form textarea::placeholder {
+  font-family: "Share Tech", sans-serif;
+}
+.contact .contactSection .formDiv form textarea {
+  resize: none;
+  height: 10rem;
+}
+.contact .contactSection .formDiv form button {
+  font-family: "Share Tech", sans-serif;
+  cursor: pointer;
+  width: 100%;
+  background: #ffe400;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+}
+.contact h3 {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  margin: 7rem 0 2rem 0;
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .contact .contactSection .emailLinkDiv,
+.contact .contactSection .formDiv {
+    width: 100%;
+  }
+}
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+footer div {
+  width: 8rem;
+}
+footer a {
+  color: #949494;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+}
+footer a:hover,
+footer a:focus {
+  color: #14a76c;
+  font-size: 1.8rem;
+}
+
+.contactFooter {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 2rem 0;
+}
+
 @media (max-width: 520px) {
   footer {
     font-size: 1.3rem;

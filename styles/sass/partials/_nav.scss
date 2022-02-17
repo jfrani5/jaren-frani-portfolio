@@ -1,6 +1,7 @@
 // General nav
 nav {
    display: flex;
+   flex-wrap: wrap;
    justify-content: space-between;
 
    img {
@@ -13,19 +14,139 @@ nav {
       transform: rotate(45deg);
    }
 
-   ul {
+   .mediaQuery {
       display: flex;
       margin: 2rem 0 0 0;
 
       a {
-         color: $yellow;
-         margin-left: 2.5rem;
+        width: 4rem;
+        display: inline-block;
+        color: $yellow;
+        margin-left: 2.5rem;
+        transition: all 0.2s ease-in-out 0s;
       }
 
       a:hover,
       a:focus {
          color: $green;
-         font-size: 1.5rem;
+         font-size: 1.3rem;
       }
    }
 }
+
+// Burger menu
+.menu {
+  display: none;
+
+  a {
+    color: $dark;
+    padding: 1rem;
+  }
+
+  a:hover,
+  a:focus {
+    color: $green;
+    font-size: 1.2rem;
+  }
+}
+
+#menuToggle {
+  display: none;
+}
+
+#menuToggle:checked + .menuContainer .burger::before {
+  margin-top: 0;
+  transform: rotate(405deg);
+}
+
+#menuToggle:checked + .menuContainer .burger {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menuToggle:checked + .menuContainer .burger::after {
+  margin-top: 0;
+  transform: rotate(-405deg);
+}
+
+.menuContainer {
+  display: none;
+  color: $yellow;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 1rem 0 0;
+}
+
+.burger::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.burger::after {
+  content: '';
+  margin-top: 8px;
+}
+
+// Media queries
+@media (max-width: 700px) {
+  nav {
+    .mediaQuery {
+      display: none;
+    }  
+  }
+
+  .menu {
+    display: flex;
+    position: absolute;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5rem;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: center;
+      color: $dark;
+      background-color: $yellow;
+      margin: 0 1rem;
+    }
+  }
+
+  .menuContainer {
+      display: flex;
+    }
+  
+  #menuToggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  #menuToggle:checked ~ .menu li {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    height: 5rem;
+    transition: height 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .burger,
+  .burger::before,
+  .burger::after {
+    background-color: $yellow;
+    position: absolute;
+    height: 4px;
+    width: 35px;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }   
+
+  .burger:hover,
+  .burger:focus {
+    background-color: $green;
+  }
+}
+
