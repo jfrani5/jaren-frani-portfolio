@@ -951,7 +951,7 @@ footer {
   padding-bottom: 2rem;
 }
 footer div {
-  width: 7rem;
+  width: 8rem;
   text-align: center;
 }
 footer a {
@@ -975,6 +975,13 @@ footer a:focus {
 
 @media (max-width: 520px) {
   footer {
+    font-size: 1.1rem;
+  }
+  footer div {
+    width: 6.5rem;
+  }
+  footer a:hover,
+footer a:focus {
     font-size: 1.3rem;
   }
 }
