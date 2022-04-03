@@ -796,6 +796,22 @@ nav .mediaQuery a:focus {
 .mainAbout .imgDiv img {
   width: 100%;
 }
+.mainAbout .scroll {
+  opacity: 0;
+  -webkit-transition: opacity 0.7s;
+  transition: opacity 0.7s;
+}
+.mainAbout .scroll.scrolled {
+  opacity: 1;
+}
+.mainAbout .scrolled.fadeIn {
+  -webkit-animation: fadeIn 1s ease-in-out both;
+          animation: fadeIn 1s ease-in-out both;
+}
+.mainAbout .scrolled.slideLeft {
+  -webkit-animation: slideLeft 0.7s ease-in-out both;
+          animation: slideLeft 0.7s ease-in-out both;
+}
 
 @media (max-width: 900px) {
   .mainAbout .projects {
@@ -1403,6 +1419,46 @@ footer a:focus {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+@-webkit-keyframes slideLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 html {
