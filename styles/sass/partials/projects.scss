@@ -41,6 +41,10 @@
          @include before("5");
       }
 
+      .six::before {
+         @include before("6");
+      }
+
       .paraDiv {
          p {
             line-height: 1.3rem;

@@ -703,7 +703,7 @@ nav .mediaQuery a:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   margin-left: 1.5rem;
 }
 .mainAbout .wholeText {
@@ -768,6 +768,16 @@ nav .mediaQuery a:focus {
   font-size: 3.5rem;
   font-weight: bold;
 }
+.mainAbout .wholeText .six::before {
+  content: "6";
+  color: #ffe400;
+  display: block;
+  position: relative;
+  left: -2rem;
+  top: 3.4rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
 .mainAbout .wholeText .paraDiv p {
   line-height: 1.3rem;
 }
@@ -809,8 +819,8 @@ nav .mediaQuery a:focus {
           animation: fadeIn 1s ease-in-out both;
 }
 .mainAbout .scrolled.slideLeft {
-  -webkit-animation: slideLeft 0.7s ease-in-out both;
-          animation: slideLeft 0.7s ease-in-out both;
+  -webkit-animation: slideLeft 1s ease-in-out both;
+          animation: slideLeft 1s ease-in-out both;
 }
 
 @media (max-width: 900px) {
